@@ -1,0 +1,8 @@
+/settings/*.config
+
+/pages/*/config
+
+/arts
+/img/arts/*
+!/img/arts/default_title.png
+favicon.ico

@@ -1,0 +1,94 @@
+.avatorImg {
+    width: 10em;
+    height: 10em;
+    margin: 3em 0;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 grey;
+}
+
+.tac {
+    text-align: center;
+}
+
+.mylinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mylinks>div {
+    margin: 4px 8px;
+}
+
+.mylinks img {
+    width: 1em;
+    height: 1em;
+    margin-top: -4px;
+}
+
+.contentFlexBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    position: relative;
+}
+
+.contentFlexBox.dircol {
+    flex-direction: column;
+}
+
+.contentFlexBox.dirrow {
+    flex-direction: row;
+}
+
+.contentFlexBox.jacenter {
+    align-content: center;
+    justify-content: center;
+}
+
+.contentFlexBox.jcenter {
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.contentFlexBox.acenter {
+    align-content: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 576px) {
+    .contentFlexBox.macenter {
+        align-content: center;
+    }
+
+    .contentFlexBox.mjcenter {
+        justify-content: center;
+    }
+}
+
+.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.fixedHeight {
+    min-height: 16em;
+    margin-top: 1em;
+}
+
+.fitcontentHeight {
+    height: fit-content;
+}
+
+.upsideText {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    letter-spacing: .2em;
+}
+
+@media screen and (max-width: 576px) {
+    .upsideText {
+        writing-mode: unset;
+        text-orientation: unset;
+        letter-spacing: 0;
+    }
+}

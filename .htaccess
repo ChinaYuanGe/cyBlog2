@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule settings 404 [NC]
+RewriteRule .git 404 [NC]
+
+RewriteRule ^/robots.txt$ /robots.txt
+RewriteRule ^/resources$ /resources/$1
+RewriteRule ^([a-zA-Z0-9/]*)$ index.php/$1

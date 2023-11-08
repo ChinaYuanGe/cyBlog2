@@ -1,0 +1,38 @@
+.infoCard {
+    display: flex;
+    min-width: 12em;
+    min-height: 3em;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid #ccc;
+}
+
+.infoCard>div:first-child>img {
+    width: 3em;
+    height: 3em;
+    margin-right: 4px;
+}
+
+.infoCard>div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    word-break: keep-all;
+}
+
+.infoCard_Title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.infoCard_a {
+    text-decoration: none;
+    color: black;
+}
+
+.infoCard_a:hover {
+    text-decoration: none;
+    color: black;
+}
