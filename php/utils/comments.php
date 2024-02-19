@@ -9,6 +9,11 @@ function GetCommentByArt(int $artID,int $page,bool $adminMode){
     $pageCount = ceil((int)$db->QuerySQL("SELECT COUNT(*) FROM comment WHERE artid=$artID".($adminMode?'':' AND visible=1'))[0][0] / $outputLimit);
     $commentCount = (int)$db->QuerySQL("SELECT COUNT(*) FROM comment WHERE artid=$artID".($adminMode?'':' AND visible=1')."")[0][0];
     $data = $db->QuerySQL("SELECT `id`,`artid`,`name`,email,content,`time`,resp as respid,(SELECT `name` FROM comment WHERE id=respid) as repname,(SELECT `content` FROM comment WHERE id=respid) as `repsrc` FROM comment WHERE artid=$artID".($adminMode?'':' AND visible=1')." ORDER BY `time` DESC LIMIT ".($page*$outputLimit).",$outputLimit",PDO::FETCH_ASSOC);
+    
+    foreach($data as &$d){
+        $d["email"] = md5($d["email"]);
+    }
+    
     return array('maxPage'=>$pageCount,'count'=>$commentCount,'commits'=>$data);
 }
 function GetCommentByID(int $id,bool $adminMode){
