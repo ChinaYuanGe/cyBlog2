@@ -64,7 +64,7 @@ function ReloadComment(page) {
                 //评论内容
                 d['data']['commits'].forEach((x) => {
                     let tr = $('<tr></tr>');
-                    tr.append('<td><img width="128" height="128" src="/api/commits/getavator.php?hash=' + x['email'] + '"></td>');
+                    tr.append('<td><img width="128" height="128" src="/api/commits/getavator.php?hash=' + md5(x['email']) + '"></td>');
                     tr.append('<td>' + x['name'] + '</td>');
 
                     tr.append('<td>' +
